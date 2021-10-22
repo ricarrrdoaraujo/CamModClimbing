@@ -29,14 +29,6 @@ AFPSCharacter::AFPSCharacter()
 void AFPSCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
-	if (GetMesh())
-	{
-		const FVector HeadSocketLocation = GetMesh()->GetSocketLocation(FName("headSocket"));
-		const FVector ArmSocketLocation = GetMesh()->GetSocketLocation(FName("HumanRUpperarmSocket"));
-		DrawDebugSphere(GetWorld(), HeadSocketLocation, 5.0, 16, FColor::Red, true, .5);
-		DrawDebugSphere(GetWorld(), ArmSocketLocation, 5.0, 16, FColor::Blue, true, .5);
-	}
 }
 
 // Called every frame
