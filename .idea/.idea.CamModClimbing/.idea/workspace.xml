@@ -20,8 +20,8 @@
       <list>
         <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacterAnimInstance.cpp" />
         <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacterAnimInstance.h" />
-        <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.h" />
         <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.h" />
       </list>
     </option>
   </component>
@@ -366,7 +366,7 @@
       <workItem from="1634708835116" duration="1954000" />
       <workItem from="1634782471074" duration="9678000" />
       <workItem from="1634792603381" duration="1720000" />
-      <workItem from="1634870836905" duration="455000" />
+      <workItem from="1634870836905" duration="808000" />
     </task>
     <servers />
   </component>
