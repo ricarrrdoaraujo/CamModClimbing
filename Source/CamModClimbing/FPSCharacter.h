@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "FCameraModifierInfo.h"
 #include "FPSCharacter.generated.h"
 
 UCLASS()
@@ -14,6 +15,8 @@ class CAMMODCLIMBING_API AFPSCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AFPSCharacter();
+
+	void Climb(FCameraModifierInfo Modifiers);
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
@@ -26,8 +29,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	void Climb();
-
 	UFUNCTION(BlueprintCallable)
 	void LerpCameraToArm();
 
@@ -39,6 +40,15 @@ protected:
 	void Turn(float Value);
 
 	void LookUp(float Value);
+
+	void MoveForward(float Value);
+
+	/** Called for side to side input */
+	void MoveRight(float Value);
+
+	FCameraModifierInfo CameraModifiers;
+
+	float CurrentDirection;
 	
 public:	
 	
@@ -49,5 +59,6 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; };
+	//FORCEINLINE AFPSCharacter* GetFPSCharacter() const { return FollowCamera; };
 
 };

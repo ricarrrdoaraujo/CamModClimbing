@@ -4,24 +4,61 @@
     <projectFile>Intermediate/ProjectFiles/CamModClimbing.vcxproj</projectFile>
     <projectFile>Intermediate/ProjectFiles/UE4.vcxproj</projectFile>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="617483da-30bf-48ef-95e4-575799f7a444" name="Default Changelist" comment="" />
+    <list default="true" id="617483da-30bf-48ef-95e4-575799f7a444" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/CamModClimbing/FCameraModifierInfo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CamModClimbing/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CamModClimbing/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CamModClimbing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CamModClimbing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animations/FP_Animations/Vault/FPSCharaterAnimBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Animations/FP_Animations/Vault/FPSCharaterAnimBP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/DefaultMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacterAnimInstance.cpp" />
         <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacterAnimInstance.h" />
-        <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/CameraModifierInfo.cpp" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/CameraModifierInfo.h" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/FCameraModifierInfo.h" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/CameraClimbingTriggerVolume.h" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/CameraClimbingTriggerVolume.cpp" />
         <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/FPSCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/CameraModifierApplyClimbingAnim.cpp" />
+        <option value="$PROJECT_DIR$/Source/CamModClimbing/MainCameraModifier.h" />
       </list>
     </option>
   </component>
@@ -367,6 +404,12 @@
       <workItem from="1634782471074" duration="9678000" />
       <workItem from="1634792603381" duration="1720000" />
       <workItem from="1634870836905" duration="808000" />
+      <workItem from="1635466699052" duration="1443000" />
+      <workItem from="1635980135714" duration="611000" />
+      <workItem from="1636326863714" duration="95000" />
+      <workItem from="1636327138717" duration="2163000" />
+      <workItem from="1636582318075" duration="7730000" />
+      <workItem from="1636591684517" duration="4247000" />
     </task>
     <servers />
   </component>
@@ -375,6 +418,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

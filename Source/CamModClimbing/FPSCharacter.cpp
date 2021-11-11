@@ -4,17 +4,11 @@
 #include "FPSCharacter.h"
 #include "Camera/CameraComponent.h"
 #include "Engine/SkeletalMeshSocket.h"
-#include "Components/CapsuleComponent.h"
 #include "DrawDebugHelpers.h"
-#include "Kismet/KismetMathLibrary.h"
 
-// Sets default values
 AFPSCharacter::AFPSCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	//GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 
 	const FAttachmentTransformRules AttachmentRules(EAttachmentRule::KeepRelative, true);
 	
@@ -25,19 +19,17 @@ AFPSCharacter::AFPSCharacter()
 
 }
 
-// Called when the game starts or when spawned
 void AFPSCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	
 }
 
-// Called every frame
 void AFPSCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
 
-// Called to bind functionality to input
 void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -46,17 +38,24 @@ void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAxis("Turn", this, &AFPSCharacter::Turn);
 	PlayerInputComponent->BindAxis("LookUp", this, &AFPSCharacter::LookUp);
 
-	PlayerInputComponent->BindAction("Climb",IE_Pressed, this, &AFPSCharacter::Climb);
+	PlayerInputComponent->BindAxis("MoveForward", this, &AFPSCharacter::MoveForward);
+	PlayerInputComponent->BindAxis("MoveRight", this, &AFPSCharacter::MoveRight);
+
 }
 
-void AFPSCharacter::Climb()
+void AFPSCharacter::Climb(FCameraModifierInfo Modifiers)
 {
-	PlayClimbingMontage();
+	CameraModifiers = Modifiers;
+	if (CurrentDirection > 0.0f)
+	{
+		PlayClimbingMontage();
+	}
 }
 
 void AFPSCharacter::LerpCameraToArm()
 {
-	FVector ArmLocation = GetMesh()->GetSocketLocation("HumanRUpperarmSocket");
+	//"HumanRUpperarmSocket"
+	FVector ArmLocation = GetMesh()->GetSocketLocation(FName(CameraModifiers.InitialSocketLocationName));
 	FollowCamera->SetWorldLocation(FMath::Lerp(
      FollowCamera->GetComponentLocation(),
      ArmLocation,
@@ -65,8 +64,10 @@ void AFPSCharacter::LerpCameraToArm()
 
 void AFPSCharacter::DettachCamFromArm()
 {
-	FVector ArmLocation = GetMesh()->GetSocketLocation("HumanRUpperarmSocket");
-	FVector CameraLocation = GetMesh()->GetSocketLocation("headSocket");
+	//"HumanRUpperarmSocket"
+	//headSocket
+	FVector ArmLocation = GetMesh()->GetSocketLocation(FName(CameraModifiers.InitialSocketLocationName));
+	FVector CameraLocation = GetMesh()->GetSocketLocation(FName(CameraModifiers.EndSocketLocationName));
 	FollowCamera->SetWorldLocation(FMath::Lerp(
      ArmLocation,
      CameraLocation,
@@ -91,4 +92,31 @@ void AFPSCharacter::Turn(float Value)
 void AFPSCharacter::LookUp(float Value)
 {
 	AddControllerPitchInput(Value);
+}
+
+
+void AFPSCharacter::MoveForward(float Value)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Value: %f"), Value);
+	CurrentDirection = Value;
+	if ((Controller != NULL) && (Value != 0.0f))
+	{
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
+
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		AddMovementInput(Direction, Value);
+	}
+}
+
+void AFPSCharacter::MoveRight(float Value)
+{
+	if ( (Controller != NULL) && (Value != 0.0f) )
+	{
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
+	
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+		AddMovementInput(Direction, Value);
+	}
 }

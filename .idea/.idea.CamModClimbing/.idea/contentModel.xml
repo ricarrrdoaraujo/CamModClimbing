@@ -49501,8 +49501,10 @@
       <e p="UE4Game.Target.cs" t="Include" />
     </e>
     <e p="C:\Users\Usuario\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Usuario\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_CamModClimbing.-1701502126.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Usuario\Documents\Unreal Projects\CamModClimbing" t="IncludeFlat">
+    <e p="C:\Users\Usuario\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_CamModClimbing.1321821739.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Usuario\Documents\CamModClimbing" t="IncludeFlat">
+      <e p=".gitattributes" t="Include" />
+      <e p=".gitignore" t="Include" />
       <e p="CamModClimbing.sln" t="IncludeFlat" />
       <e p="CamModClimbing.uproject" t="Include" />
       <e p="Config" t="Include">
@@ -49521,15 +49523,25 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source" t="Include">
         <e p="CamModClimbing" t="Include">
+          <e p="CameraClimbingTriggerVolume.cpp" t="Include" />
+          <e p="CameraClimbingTriggerVolume.h" t="Include" />
+          <e p="CameraModifierApplyClimbingAnim.cpp" t="Include" />
+          <e p="CameraModifierApplyClimbingAnim.h" t="Include" />
           <e p="CamModClimbing.Build.cs" t="Include" />
           <e p="CamModClimbing.cpp" t="Include" />
           <e p="CamModClimbing.h" t="Include" />
           <e p="CamModClimbingGameModeBase.cpp" t="Include" />
           <e p="CamModClimbingGameModeBase.h" t="Include" />
+          <e p="FCameraModifierInfo.cpp" t="Include" />
+          <e p="FCameraModifierInfo.h" t="Include" />
           <e p="FPSCharacter.cpp" t="Include" />
           <e p="FPSCharacter.h" t="Include" />
           <e p="FPSCharacterAnimInstance.cpp" t="Include" />
           <e p="FPSCharacterAnimInstance.h" t="Include" />
+          <e p="FPSCharacterCameraManager.cpp" t="Include" />
+          <e p="FPSCharacterCameraManager.h" t="Include" />
+          <e p="MainCameraModifier.cpp" t="Include" />
+          <e p="MainCameraModifier.h" t="Include" />
         </e>
         <e p="CamModClimbing.Target.cs" t="Include" />
         <e p="CamModClimbingEditor.Target.cs" t="Include" />
